@@ -12,7 +12,7 @@ const MAX_DISPLAY = 5
 export async function getServerSideProps() {
   const posts = await getAllFilesFrontMatter('blog')
   const date = new Date()
-  return { props: { posts, currentDateString: date.toString() } }
+  return { props: { posts, currentDateString: `${date.toString()}-test` } }
 }
 
 export default function Home({ posts, currentDateString }) {
